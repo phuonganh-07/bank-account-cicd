@@ -43,7 +43,7 @@ public class BankAccount {
       logger.error("Withdrawal failed: Insufficient funds. Account: {}, Balance: {}, Requested: {}", accountNumber, balance, amount);
       return false;
     }
-    this.balance += amount;
+    this.balance -= amount;
     logger.info("Withdrew {} from account {}. New balance: {}", amount, accountNumber, balance);
     return true;
   }
